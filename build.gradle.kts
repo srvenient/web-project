@@ -15,6 +15,7 @@ repositories {
 }
 
 dependencies {
+  compileOnly("org.jetbrains:annotations:24.1.0")
   implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
   implementation("org.springframework.boot:spring-boot-starter-data-rest")
   //implementation("org.springframework.boot:spring-boot-starter-data-jpa")
