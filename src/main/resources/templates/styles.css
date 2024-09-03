@@ -1,0 +1,18 @@
+body {
+  font-family: 'Microsoft JhengHei Light', serif;
+  background-color: white;
+}
+
+nav {
+  background-color: #072146;
+}
+
+.size {
+  width: 350px;
+  height: 60px;
+  padding-left: 20px;
+}
+
+.form-container input:not(:placeholder-shown) {
+  padding-top: 1.5rem;
+}
