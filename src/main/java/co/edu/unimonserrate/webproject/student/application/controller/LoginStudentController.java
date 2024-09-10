@@ -49,7 +49,7 @@ public final class LoginStudentController {
   @PostMapping("/login")
   public String login(@ModelAttribute("student") final @NotNull StudentDTO student) {
     if (this.studentService.getStudent(student) != null) {
-      return "redirect:/home";
+      return "redirect:/api/v1/home";
     }
     return "redirect:/?error";
   }
