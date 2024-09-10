@@ -1,0 +1,50 @@
+body {
+  font-family: 'Microsoft JhengHei Light', serif;
+  background-color: white;
+}
+
+nav {
+  background-color: #072146;
+}
+
+.size {
+  width: 350px;
+  height: 60px;
+  padding-left: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  background-color: #028484;
+}
+
+nav a i {
+  font-size: 1.5rem;
+}
+
+.form-container input:not(:placeholder-shown) {
+  padding-top: 1.5rem;
+}
+
+.form-container input:focus {
+  border: none;
+}
+
+#error-message {
+  color: #1d1d1d;
+  display: none;
+  font-size: 14px;
+  align-items: center;
+}
+
+#error-message i {
+  color: red;
+  font-size: 24px;
+  margin-right: 8px;
+}
+
+#login:disabled,
+#register:disabled {
+  opacity: 0.5;
+}
