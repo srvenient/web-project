@@ -1,5 +1,10 @@
 package co.edu.unimonserrate.webproject.student.domain.dto;
 
+import org.jetbrains.annotations.NotNull;
+
+/**
+ * This class represents the Data Transfer Object (DTO) for the Student entity.
+ */
 public final class StudentDTO {
   private String fullName;
   private String email;
@@ -7,14 +12,26 @@ public final class StudentDTO {
   private String password;
   private boolean termsAndConditions;
 
+  /**
+   * Default constructor.
+   */
   public StudentDTO() {
   }
 
+  /**
+   * Constructor with parameters.
+   *
+   * @param fullName           the full name of the student
+   * @param email              the email of the student
+   * @param phone              the phone number of the student
+   * @param password           the password of the student
+   * @param termsAndConditions the terms and conditions acceptance of the student
+   */
   public StudentDTO(
-    final String fullName,
-    final String email,
-    final String phone,
-    final String password,
+    final @NotNull String fullName,
+    final @NotNull String email,
+    final @NotNull String phone,
+    final @NotNull String password,
     final boolean termsAndConditions
   ) {
     this.fullName = fullName;
@@ -28,7 +45,7 @@ public final class StudentDTO {
     return fullName;
   }
 
-  public void setFullName(final String fullName) {
+  public void setFullName(final @NotNull String fullName) {
     this.fullName = fullName;
   }
 
@@ -36,7 +53,7 @@ public final class StudentDTO {
     return email;
   }
 
-  public void setEmail(final String email) {
+  public void setEmail(final @NotNull String email) {
     this.email = email;
   }
 
@@ -44,7 +61,7 @@ public final class StudentDTO {
     return phone;
   }
 
-  public void setPhone(final String phone) {
+  public void setPhone(final @NotNull String phone) {
     this.phone = phone;
   }
 
@@ -52,7 +69,7 @@ public final class StudentDTO {
     return password;
   }
 
-  public void setPassword(final String password) {
+  public void setPassword(final @NotNull String password) {
     this.password = password;
   }
 

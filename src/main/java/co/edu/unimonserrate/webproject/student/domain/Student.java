@@ -6,6 +6,12 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.UUID;
 
+/**
+ * This class represents the Student entity
+ * in the domain layer.
+ *
+ * <p>It is used to store the information of a student.</p>
+ */
 @Entity
 @Table(name = "students")
 public final class Student {
@@ -24,18 +30,41 @@ public final class Student {
   @Column(name = "terms_and_conditions")
   private boolean termsAndConditions;
 
+  /**
+   * Default constructor.
+   */
   public Student() {
   }
 
+  /**
+   * Constructor with parameters.
+   *
+   * @param email the email of the student
+   */
   public Student(final @NotNull String email) {
     this.email = email;
   }
 
+  /**
+   * Constructor with parameters.
+   *
+   * @param email    the email of the student
+   * @param password the password of the student
+   */
   public Student(final @NotNull String email, final @NotNull String password) {
     this.email = email;
     this.password = password;
   }
 
+  /**
+   * Constructor with parameters.
+   *
+   * @param fullName           the full name of the student
+   * @param email              the email of the student
+   * @param phone              the phone number of the student
+   * @param password           the password of the student
+   * @param termsAndConditions the terms and conditions acceptance of the student
+   */
   public Student(
     final @NotNull String fullName,
     final @NotNull String email,
@@ -46,6 +75,16 @@ public final class Student {
     this(UUID.randomUUID(), fullName, email, phone, password, termsAndConditions);
   }
 
+  /**
+   * Constructor with parameters.
+   *
+   * @param id                 the identifier of the student
+   * @param fullName           the full name of the student
+   * @param email              the email of the student
+   * @param phone              the phone number of the student
+   * @param password           the password of the student
+   * @param termsAndConditions the terms and conditions acceptance of the student
+   */
   public Student(
     final @NotNull UUID id,
     final @NotNull String fullName,
