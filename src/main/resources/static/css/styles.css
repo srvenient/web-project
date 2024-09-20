@@ -48,3 +48,29 @@ nav a i {
 #register:disabled {
   opacity: 0.5;
 }
+
+.hero {
+  background-color: #043262;
+  height: 409px;
+  display: flex;
+  justify-content: space-between; /* Alinea info a la izquierda y banner a la derecha */
+  align-items: center;
+}
+
+.info {
+  margin-left: 140px;
+}
+
+.banner {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.banner img {
+  width: 100%;
+  height: 409px;
+  object-fit: cover;
+  clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+

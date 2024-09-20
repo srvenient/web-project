@@ -25,7 +25,10 @@
       </div>
     </div>
     <h1 style="font-family: Arial,serif; font-weight: normal; font-size: 31px">Ingresa a la biblioteca</h1>
-    <p class="mt-1 text-center" style="margin-bottom: -15px; font-size: 17px; color: #555;">Hola, ingresa tu número de documento y contraseña <br>para entrar a la Biblioteca</p>
+    <p class="mt-1 text-center" style="margin-bottom: -15px; font-size: 17px; color: #555;">
+      Hola, ingresa tu correo institucional y contraseña<br>
+      para entrar a la Biblioteca
+    </p>
     <div class="container d-flex justify-content-center">
       <form th:action="@{/login}" method="post" th:object="${studentDTO}">
         <div>

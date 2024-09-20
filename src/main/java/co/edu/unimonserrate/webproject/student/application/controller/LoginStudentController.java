@@ -1,6 +1,7 @@
 package co.edu.unimonserrate.webproject.student.application.controller;
 
 import co.edu.unimonserrate.webproject.student.application.StudentService;
+import co.edu.unimonserrate.webproject.student.domain.Student;
 import co.edu.unimonserrate.webproject.student.domain.dto.StudentDTO;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.stereotype.Controller;
@@ -43,13 +44,14 @@ public final class LoginStudentController {
   /**
    * This method login a student.
    *
-   * @param student the student to login
+   * @param studentDTO the student to login
    * @return the home page if the student exists, the login page otherwise
    */
   @PostMapping("/login")
-  public String login(@ModelAttribute("student") final @NotNull StudentDTO student) {
-    if (this.studentService.getStudent(student) != null) {
-      return "redirect:/api/v1/home";
+  public String login(@ModelAttribute("student") final @NotNull StudentDTO studentDTO) {
+    final Student student = this.studentService.studentOf(studentDTO);
+    if (student != null) {
+      return "redirect:/api/v1/home?&name=" + student.fullName().split(" ")[0] + "email=" + student.email();
     }
     return "redirect:/?error";
   }

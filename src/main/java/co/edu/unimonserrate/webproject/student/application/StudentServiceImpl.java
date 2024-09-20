@@ -7,11 +7,16 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.springframework.stereotype.Service;
 
+/**
+ * This class represents the service for the Student entity.
+ *
+ * @see StudentRepository
+ */
 @Service
 public class StudentServiceImpl implements StudentService {
   private final StudentRepository studentRepository;
 
-  public StudentServiceImpl(StudentRepository studentRepository) {
+  public StudentServiceImpl(final @NotNull StudentRepository studentRepository) {
     this.studentRepository = studentRepository;
   }
 
@@ -33,7 +38,7 @@ public class StudentServiceImpl implements StudentService {
   }
 
   @Override
-  public @Nullable Student getStudent(final @NotNull StudentDTO studentDTO) {
+  public @Nullable Student studentOf(final @NotNull StudentDTO studentDTO) {
     for (final Student student : this.studentRepository.findAll()) {
       if (student.email().equals(studentDTO.getEmail()) && student.password().equals(studentDTO.getPassword())) {
         return student;
