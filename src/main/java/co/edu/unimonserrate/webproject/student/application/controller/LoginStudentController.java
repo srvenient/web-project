@@ -51,7 +51,7 @@ public final class LoginStudentController {
   public String login(@ModelAttribute("student") final @NotNull StudentDTO studentDTO) {
     final Student student = this.studentService.studentOf(studentDTO);
     if (student != null) {
-      return "redirect:/api/v1/home?&name=" + student.fullName().split(" ")[0] + "email=" + student.email();
+      return "redirect:/api/v1/home?&name=" + student.fullName().split(" ")[0] + "&email=" + student.email();
     }
     return "redirect:/?error";
   }
