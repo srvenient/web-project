@@ -9,13 +9,14 @@ public class StudentPasswordTest {
   @Test
   void passwordMustNotBeBlank() {
     // Arrange
-    var id = java.util.UUID.randomUUID();
     var fullName = "John Doe";
     var email = "jdoe@unimonserrate.edu.co";
+    var phone = "1234567890";
     var password = "";
+    var termsAndConditions = true;
 
     // Act & Assert
-    Assertions.assertThrows(IllegalArgumentException.class, () -> new Student(id, fullName, email, password));
+    Assertions.assertThrows(IllegalArgumentException.class, () -> new Student(fullName, email, phone, password, termsAndConditions));
   }
 
   @Test
