@@ -22,9 +22,6 @@ public class StudentPasswordTest {
   @Test
   void passwordMustHaveAtLeast8Characters() {
     // Arrange
-    var id = java.util.UUID.randomUUID();
-    var fullName = "John Doe";
-    var email = "jdoe@unimonserrate.edu.co";
     var password = "1234567";
 
     // Act & Assert
