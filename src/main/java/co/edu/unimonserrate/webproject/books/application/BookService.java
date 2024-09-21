@@ -8,6 +8,17 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Collection;
 
+/**
+ * This interface represents the service for the Book entity.
+ *
+ * @see Book
+ */
 public interface BookService {
-  @NotNull Collection<Book> getAllBooks();
+  /**
+   * This method retrieves all existing
+   * books in the database.
+   *
+   * @return all existing books in the database
+   */
+  @NotNull Collection<@NotNull Book> getAllBooks();
 }

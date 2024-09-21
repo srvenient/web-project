@@ -26,7 +26,7 @@ public class BookServiceImpl implements BookService {
   }
 
   @Override
-  public @NotNull Collection<Book> getAllBooks() {
+  public @NotNull Collection<@NotNull Book> getAllBooks() {
     return this.bookRepository.findAll();
   }
 }

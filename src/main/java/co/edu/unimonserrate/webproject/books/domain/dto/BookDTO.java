@@ -1,11 +1,23 @@
 package co.edu.unimonserrate.webproject.books.domain.dto;
 
+import co.edu.unimonserrate.webproject.books.domain.Book;
+
+/**
+ * This class represents the Data Transfer Object (DTO)
+ * for the Book entity.
+ *
+ * @see Book
+
+ */
 public final class BookDTO {
   private String title;
   private String author;
   private String description;
   private String image;
 
+  /**
+   * This constructor initializes the BookDTO object.
+   */
   public BookDTO() {
   }
 
