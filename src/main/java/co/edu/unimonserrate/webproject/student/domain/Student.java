@@ -117,40 +117,20 @@ public final class Student {
     return this.fullName;
   }
 
-  public void fullName(final @NotNull String fullName) {
-    this.fullName = fullName;
-  }
-
   public @NotNull String email() {
     return this.email;
-  }
-
-  public void email(final @NotNull String email) {
-    this.email = email;
   }
 
   public @NotNull String phone() {
     return this.phone;
   }
 
-  public void phone(final @NotNull String phone) {
-    this.phone = phone;
-  }
-
   public @NotNull String password() {
     return this.password;
   }
 
-  public void password(final @NotNull String password) {
-    this.password = password;
-  }
-
   public boolean termsAndConditions() {
     return this.termsAndConditions;
-  }
-
-  public void termsAndConditions(final boolean termsAndConditions) {
-    this.termsAndConditions = termsAndConditions;
   }
 
   @Override
