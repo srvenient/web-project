@@ -4,11 +4,9 @@ import co.edu.unimonserrate.webproject.books.application.BookService;
 import co.edu.unimonserrate.webproject.books.domain.Book;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * This class represents the controller for the Book entity.
@@ -32,17 +30,8 @@ public final class BooksStudentController {
    * @return the books page
    */
   @GetMapping
-  public @NotNull String show() {
+  public @NotNull String show(final @NotNull Model model) {
+    model.addAttribute("books", this.bookService.getAllBooks());
     return "books";
-  }
-
-  /**
-   * This method retrieves all existing books in the database.
-   *
-   * @return all existing books in the database
-   */
-  @GetMapping("/all")
-  public @NotNull List<@NotNull Book> getAll() {
-    return new ArrayList<>(this.bookService.getAllBooks());
   }
 }
