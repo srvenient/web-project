@@ -10,6 +10,7 @@ table th {
   text-align: center;
   border: 1px solid #ddd;
 }
+
 nav {
   background-color: #072146;
 }
@@ -49,6 +50,20 @@ nav a i {
   color: red;
   font-size: 24px;
   margin-right: 8px;
+}
+
+.required-field {
+  position: relative;
+}
+
+.required-field::after {
+  content: "*";
+  position: absolute;
+  right: 10px; /* Ajusta según sea necesario */
+  top: 50%;
+  transform: translateY(-50%);
+  color: red;
+  font-size: 1.2em; /* Ajusta el tamaño del asterisco */
 }
 
 #login:disabled,
