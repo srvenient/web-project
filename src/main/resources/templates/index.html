@@ -31,7 +31,7 @@
     </p>
     <div class="container d-flex justify-content-center">
       <form th:action="@{/login}" method="post" th:object="${studentDTO}">
-        <div>
+        <div class="required-field">
           <label for="email"></label><input type="email"
                                             class="size mt-4 input border-top-0 border-end-0 border-start-0"
                                             id="email"
@@ -39,7 +39,7 @@
                                             style="background-color: #F4F4F4"
                                             th:field="*{email}" required autofocus="autofocus">
         </div>
-        <div>
+        <div class="required-field">
           <label for="password"></label><input type="password"
                                                class="size mt-3 input border-top-0 border-end-0 border-start-0"
                                                id="password"
